@@ -4,10 +4,10 @@
 # This device should be reachable and have SSH enabled with the provided credentials.
 single_device = {
     "device_type": "cisco_ios",
-    "host": "192.168.1.10", # DUMMY IP - REPLACE WITH YOUR DEVICE'S IP
-    "username": "dummy_user", # DUMMY USERNAME - REPLACE WITH YOUR DEVICE'S USERNAME
-    "password": "dummy_password", # DUMMY PASSWORD - REPLACE WITH YOUR DEVICE'S PASSWORD
-    "secret": "dummy_enable", # DUMMY ENABLE PASSWORD - REPLACE IF YOUR DEVICE USES ONE
+    "host": "10.10.20.48", # DUMMY IP - REPLACE WITH YOUR DEVICE'S IP
+    "username": "developer", # DUMMY USERNAME - REPLACE WITH YOUR DEVICE'S USERNAME
+    "password": "C1sco12345", # DUMMY PASSWORD - REPLACE WITH YOUR DEVICE'S PASSWORD
+    "secret": "C1sco12345", # DUMMY ENABLE PASSWORD - REPLACE IF YOUR DEVICE USES ONE
     "port": 22, # Default SSH port
     # "session_log": "device_session.log", # Uncomment to log SSH session
 }
@@ -20,15 +20,15 @@ multi_devices = [
         "device_type": "cisco_ios",
         "host": "10.10.10.48", # DUMMY IP 1 (can be the same as single_device if you only have one)
         "username": "developer",
-        "password": "dummy_password",
-        "secret": "dummy_enable",
+        "password": "C1sco12345",
+        "secret": "C1sco12345",
     },
     {
         "device_type": "cisco_xr", # in Cisco Sandbox, this is a IOS XR router
         "host": "10.10.10.35", # DUMMY IP 2
         "username": "developer",
-        "password": "dummy_password",
-        "secret": "dummy_enable",
+        "password": "C1sco12345",
+        "secret": "C1sco12345",
     }
 
     # Add more device dictionaries here if you have more lab devices
