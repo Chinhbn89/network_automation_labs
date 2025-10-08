@@ -1,0 +1,6 @@
+
+    version 15.6
+    hostname My-Lab-Router
+    interface Loopback0
+    ip address 1.1.1.1 255.255.255.255
+    end

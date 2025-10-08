@@ -1,0 +1,15 @@
+site: Headquarters
+routers:
+- name: R1
+  ip: 192.168.1.1
+  os: IOS-XE
+- name: R2
+  ip: 192.168.1.2
+  os: IOS-XR
+switches:
+- name: SW1
+  ip: 192.168.1.10
+  model: Catalyst 9300
+firewall:
+  name: FW1
+  ip: 192.168.1.20

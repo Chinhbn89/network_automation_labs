@@ -1,0 +1,22 @@
+{
+    "device_id": "R1-Core",
+    "ip_address": "10.0.0.1",
+    "vendor": "Cisco",
+    "model": "ISR4431",
+    "interfaces": [
+        {
+            "name": "GigabitEthernet0/0/0",
+            "status": "up",
+            "ip": "10.0.0.1"
+        },
+        {
+            "name": "GigabitEthernet0/0/1",
+            "status": "down",
+            "ip": "unassigned"
+        }
+    ],
+    "credentials": {
+        "username": "admin",
+        "password": "cisco"
+    }
+}
