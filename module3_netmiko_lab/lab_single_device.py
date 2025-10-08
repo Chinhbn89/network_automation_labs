@@ -16,19 +16,27 @@ print("\n--- Lab 2.1: Push Configuration Changes ---")
 config_commands = [
     "interface Loopback100",
     "description CONFIGURED_BY_NETMIKO_LAB",
-    "ip address 10.0.0.100 255.255.255.255",
+    "ip address 10.0.1.100 255.255.255.255",
     "no shutdown",
     "router ospf 1",
-    "network 10.0.0.0 0.0.0.255 area 0"
+    "network 10.0.1.0 0.0.0.255 area 0"
 ]
 
 print("\nApplying configuration commands...")
 config_output = apply_config_commands(single_device, config_commands)
 print("\n--- Configuration Output ---")
 print(config_output)
-
-output = get_device_info(single_device, command="show run interface loo100")
+commands = ["show run interface loo100", "show run | sec ospf"]
 print("\n--- Result after change config ---")
-print(output)
-
+for cmd in commands:
+    output = get_device_info(single_device, cmd)
+    print(output)
+    print("="*60 + "\n")
 print("\nLab 2.1 complete.")
+
+print("\n--- Lab 2.2: Perform Configuration Backups ---")
+print("\nCollecting 'show running-config' for backup...")
+backup_result = backup_running_config(single_device)
+print(backup_result)
+print("\nLab 2.2 complete.")
+
